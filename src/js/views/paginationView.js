@@ -21,7 +21,7 @@ class PaginationView extends View {
     const curPage = this._data.page;
     const totalPages = `
     
-      <span class="pagination__total--pages total-pages">${numPages} Pages</span>
+      <span class="pagination__total--pages total-pages">${curPage} / ${numPages}</span>
 
     `;
     const next = `
