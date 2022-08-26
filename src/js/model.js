@@ -33,7 +33,6 @@ export const loadRecipe = async function (id) {
   try {
     const data = await AJAX(`${API_URL}${id}?key=${KEY}`);
     state.recipe = createRecipeObject(data);
-    // console.log(res, data);
 
     if (state.bookmarks.some(b => b.id === id)) state.recipe.bookmarked = true;
     else state.recipe.bookmarked = false;
